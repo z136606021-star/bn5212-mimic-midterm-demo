@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="MimicDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="false">
+    <option name="ACTIVE_PROFILES" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+    <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+    <module name="mimic-demo-backend" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.bn5212.mimic.MimicDemoApplication" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

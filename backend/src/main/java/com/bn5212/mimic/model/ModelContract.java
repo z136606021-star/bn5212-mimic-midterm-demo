@@ -1,0 +1,3 @@
+package com.bn5212.mimic.model;
+import java.util.*;
+public class ModelContract { public String schema_version,task; public List<String> features; public List<Double> medians,means,scales,coefficients; public double intercept; public boolean valid(){return "1.0".equals(schema_version)&&features!=null&&features.size()==coefficients.size()&&features.size()==medians.size()&&features.size()==means.size()&&features.size()==scales.size()&&Double.isFinite(intercept)&&medians.stream().allMatch(Double::isFinite)&&means.stream().allMatch(Double::isFinite)&&scales.stream().allMatch(v->Double.isFinite(v)&&v>0)&&coefficients.stream().allMatch(Double::isFinite);}}

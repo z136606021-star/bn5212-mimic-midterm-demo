@@ -1,0 +1,59 @@
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Java build output
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# IDE personal / local state (keep shareable .idea project files and .run/)
+.idea/workspace.xml
+.idea/shelf/
+.idea/httpRequests/
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/dictionaries/
+*.iws
+.vscode/
+*.swp
+.DS_Store
+
+# Local secrets and env
+.env
+.env.local
+*.pem
+*.key
+
+# Local MIMIC / patient-level data (never commit)
+data/
+*.csv
+*.csv.gz
+*.parquet
+*.joblib
+
+# Regenerable ML output — deny by default; allow only shareable aggregates
+artifacts/*
+!artifacts/.gitkeep
+!artifacts/export/
+!artifacts/export/*.json
+!artifacts/summary.example.json
+
+# Keep patient-level regenerables out even if paths change
+artifacts/summary.json
+artifacts/*.csv
+artifacts/*.csv.gz
+artifacts/*.parquet
+artifacts/*.joblib
+
+# Generated reports
+reports/generated/

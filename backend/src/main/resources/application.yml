@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: mimic-demo-backend
+mimic:
+  # Relative default assumes Maven/IDEA cwd is backend/. ArtifactRootResolver also
+  # accepts demo-root cwd (artifacts/) and absolute DEMO_ARTIFACT_ROOT overrides.
+  artifact-root: ${DEMO_ARTIFACT_ROOT:../artifacts}

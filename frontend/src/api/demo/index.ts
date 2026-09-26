@@ -1,0 +1,2 @@
+async function get<T>(url:string,init?:RequestInit):Promise<T>{const r=await fetch(url,init);if(!r.ok){const e=await r.json().catch(()=>({message:`HTTP ${r.status}`}));throw new Error(e.message??e.detail)}return r.json()}
+export const demoApi={tasks:()=>get<{tasks:any[]}>("/api/tasks"),summary:()=>get<any>("/api/summary"),predict:(task:string,features:Record<string,number|null>)=>get<any>("/api/demo/predict",{method:"POST",headers:{"Content-Type":"application/json","X-Request-Id":crypto.randomUUID()},body:JSON.stringify({task,features})})}
