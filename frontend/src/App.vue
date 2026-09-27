@@ -250,8 +250,8 @@ onMounted(load)
             </Row>
           </section>
 
-          <Row :gutter="[20, 20]" class="workspace">
-            <Col :xs="24" :lg="14">
+          <div class="workspace">
+            <section class="workspace-section">
               <Card title="02 / Model card / 模型卡">
                 <template #extra><Tag>{{ task?.title }}</Tag></template>
 
@@ -301,9 +301,9 @@ onMounted(load)
                   <p class="muted">Logistic regression · median imputation + missing indicators · patient-level split</p>
                 </template>
               </Card>
-            </Col>
+            </section>
 
-            <Col :xs="24" :lg="10">
+            <section class="workspace-section">
               <Card title="03 / Live teaching demo / 实时教学演示">
                 <template v-if="!summary.demo_samples.length">
                   <Empty description="This summary has no held-out demo case / 当前摘要没有留出的演示案例" />
@@ -442,8 +442,8 @@ onMounted(load)
                   </template>
                 </template>
               </Card>
-            </Col>
-          </Row>
+            </section>
+          </div>
 
           <section>
             <div class="section-heading">
